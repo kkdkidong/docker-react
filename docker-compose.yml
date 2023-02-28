@@ -1,0 +1,13 @@
+version: "3"
+services:
+  react:
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    ports:
+     - "3000:3000"
+    volumes:
+     - /usr/src/nodeapp2/node_modules
+     - ./:/usr/src/nodeapp2
+    stdin_open: true
+  
